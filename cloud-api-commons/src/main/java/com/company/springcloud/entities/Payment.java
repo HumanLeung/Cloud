@@ -1,28 +1,26 @@
 package com.company.springcloud.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.Objects;
 
-@Entity
+@ToString
+@Setter
+@Getter
 public class Payment {
-    private long id;
+    private Long id;
     private String serial;
 
-    @Id
-    @Column(name = "id")
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "serial")
     public String getSerial() {
         return serial;
     }
