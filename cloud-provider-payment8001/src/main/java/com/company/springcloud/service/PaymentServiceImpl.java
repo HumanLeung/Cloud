@@ -5,9 +5,14 @@ import com.company.springcloud.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
+/**
+ * @author Administrator
+ */
 @Service
 public class PaymentServiceImpl implements PaymentService {
-    final private PaymentRepository paymentRepository;
+    private final PaymentRepository paymentRepository;
 
     @Autowired
     public PaymentServiceImpl(PaymentRepository paymentRepository) {
@@ -21,6 +26,9 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment findById(Long id){
-        return paymentRepository.findById(id).get();
+        Payment payment = new Payment();
+        payment.setId(123214L);
+        payment.setSerial(UUID.randomUUID().toString());
+        return paymentRepository.findById(id).orElse(payment);
     }
 }

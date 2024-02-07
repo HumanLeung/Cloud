@@ -14,10 +14,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Component
 @FeignClient(value = "CLOUD-PAYMENT-SERVICE")
 public interface PaymentFeignService {
-
+    /**
+     * test
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/payment/get/{id}")
-    public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+    CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
 
+    /**
+     * test
+     * @return
+     */
     @GetMapping(value = "/payment/feign/timeout")
-    public String paymentFeignTimeout();
+    String paymentFeignTimeout();
 }

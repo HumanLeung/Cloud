@@ -23,6 +23,9 @@
       <module>cloud-gateway-gateway9527</module>
       <module>cloud-config-center-3344</module>
       <module>cloud-config-client-3355</module>
+      <module>cloud-product-service</module>
+    <module>cloud-order-service</module>
+      <module>cloud-zuul-demo</module>
   </modules>
   <packaging>pom</packaging>
 

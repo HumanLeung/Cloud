@@ -13,13 +13,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Administrator
+ */
 @RestController
 @RequestMapping
 @Slf4j
 public class PaymentController {
 
-    final private PaymentService paymentService;
-    final private DiscoveryClient discoveryClient;
+    private final PaymentService paymentService;
+    private final DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
     private String serverPort;
