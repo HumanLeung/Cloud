@@ -13,4 +13,7 @@ public interface ProductService {
      * @return
      */
     Product selectProductById(Integer id);
+
+    void changeStock();
+
 }

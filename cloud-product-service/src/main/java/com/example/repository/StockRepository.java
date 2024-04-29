@@ -1,6 +1,6 @@
-package com.company.springcloud.repository;
+package com.example.repository;
 
-import com.company.springcloud.entities.Payment;
+import com.example.entity.Stock;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Repository;
  * @author Administrator
  */
 @Repository
-public interface PaymentRepository extends JpaRepository<Payment,Long> {
+public interface StockRepository extends JpaRepository<Stock,Integer> {
 
     /**
+     * asd
      * @param id
-     * @param money
+     * @param num
      */
     @Modifying
-    @Query(value = "UPDATE Payment SET money = ?2 where id = ?1")
-    void updatePay(long id, int money);
-
+    @Query(value = "UPDATE Stock SET num = ?2 where ID = ?1")
+    void updateStock(int id, int num);
 }

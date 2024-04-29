@@ -6,10 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
 
+/**
+ * @author Administrator
+ */
 @Entity
 public class Payment {
     private long id;
     private String serial;
+    private Integer money;
 
     @Id
     @Column(name = "id")
@@ -29,6 +33,14 @@ public class Payment {
 
     public void setSerial(String serial) {
         this.serial = serial;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
+
+    public Integer getMoney() {
+        return money;
     }
 
     @Override

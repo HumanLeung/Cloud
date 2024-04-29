@@ -8,6 +8,8 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 /**
  * @author HumanLeung
  * @create 2021/10/3 12:36
@@ -18,6 +20,7 @@ import org.springframework.context.annotation.Bean;
 public class PaymentHystrixMain8001 {
     public static void main(String[] args) {
         SpringApplication.run(PaymentHystrixMain8001.class,args);
+        List
     }
 
     /**

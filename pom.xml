@@ -26,6 +26,8 @@
       <module>cloud-product-service</module>
     <module>cloud-order-service</module>
       <module>cloud-zuul-demo</module>
+      <module>Transaction-Monitor</module>
+      <module>cloud-spring-boot-admin</module>
   </modules>
   <packaging>pom</packaging>
 

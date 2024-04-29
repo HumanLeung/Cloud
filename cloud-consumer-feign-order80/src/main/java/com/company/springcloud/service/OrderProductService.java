@@ -1,10 +1,11 @@
-package com.example.service;
+package com.company.springcloud.service;
 
-import com.example.pojo.Product;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author Administrator
@@ -14,12 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface OrderProductService {
 
 
-    /**
-     * asd
-     * @param id
-     * @return
-     */
-    @GetMapping("/product/{id}")
-    Product selectProductById(@PathVariable("id") Integer id);
+    @GetMapping("/product/stock")
+    String stock(@RequestParam("tId") String tId);
 
 }
